@@ -1,7 +1,0 @@
-{
-    "PORT": 8080,
-
-    "TOKEN_SECRET": "numenusecret",
-    "DEFAULT_USER": "Numenu",
-    "DEFAULT_PASSWORD": "123123"
-}

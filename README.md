@@ -1,26 +1,14 @@
-# Node Auth
+# Questões
 
-Documentação de utilização da api de autenticação node
+## O Node é multithreaded?
+- Não, o javascript é uma linguagem que foi criada com o conceito de single-thread e, por decorrência, o Node.js também. Porém, desde a versão 10.5.0 está em desenvolvimento um módulo de worker_threads, mas o mesmo ainda é uma feature experimental.
 
-## Autenticação
+## Arrow functions e functions são a mesma coisa?
+- Arrow function é uma abreviação da sintaxe de uma functions, porém, ambas possuem diferenças de escopo. Arrow function são funções anônimas e possuem um **this** próprio.
+## Como evitar dependência cíclica no Node?
+## Cite uma complexidade na arquitetura de microsserviços que não aparece em um sistema monolítico;
+- Uma dificuldade proveniente de arquiteturas de MS é a comunicação entre os mesmos.
 
-### Request
-```
-curl --request POST \
-  --url http://localhost:8080/token \
-  --header 'content-type: application/json' \
-  --data '{
-	"username": "Numenu",
-	"password": "123123"
-}'
-```
-
-### Response
-```
-{
-  "message": "Usuário autenticado com sucesso!",
-  "data": {
-    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik51bWVudSIsInBhc3N3b3JkIjoiMTIzMTIzIiwiaWF0IjoxNTYzOTMxOTAxLCJleHAiOjE1NjQ1MzY3MDF9.Z5RX_ZDyrFJrTKlYkzdNYj8RksPdc9y6zqGZwgfDRVo"
-  }
-}
-```
+## Como você centralizaria verticalmente uma <div> na tela?
+## Em um stack comum que inclui React, por que podemos usar as mais novas features do javascript sem se preocupar com compatibilidade de navegador?
+## Cite e exemplifique 2 efeitos colaterais comuns no javascript;
