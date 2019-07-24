@@ -22,7 +22,7 @@ class TokenService {
         return new Promise((resolve, reject) => {
             return jwt.sign({ username, password }, this.tokenSecret, expiresIn && { expiresIn }, (err, token) => {
                 if (err) reject(new Error('Erro ao autenticar usuário'));
-                else resolve({ accessToken: token, message: 'Usuário autenticado com sucesso!' });
+                else resolve({ message: 'Usuário autenticado com sucesso!', data: { accessToken: token } });
             });
         });   
     } catch (err) {
