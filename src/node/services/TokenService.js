@@ -6,8 +6,8 @@ const validateCredentials = (username, password) => {
     if(!(username && password)) 
         throw new Error('Usuário e senha são campos obigatórios');
 
-    if(username !== config.get("DEFAULT_USER") || password !== config.get("DEFAULT_PASSWORD"))
-        throw new Error("Usuário ou senha inválidos");
+    if(username !== config.get('DEFAULT_USER') || password !== config.get('DEFAULT_PASSWORD'))
+        throw new Error('Usuário ou senha inválidos');
 }
 
 class TokenService {
@@ -21,8 +21,8 @@ class TokenService {
         validateCredentials(username, password);
         return new Promise((resolve, reject) => {
             return jwt.sign({ username, password }, this.tokenSecret, expiresIn && { expiresIn }, (err, token) => {
-                if (err) reject(new Error("Erro ao autenticar usuário"));
-                else resolve({ accessToken: token });
+                if (err) reject(new Error('Erro ao autenticar usuário'));
+                else resolve({ accessToken: token, message: 'Usuário autenticado com sucesso!' });
             });
         });   
     } catch (err) {
